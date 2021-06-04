@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constrain_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ tools:context=".MainActivity"
+    android:background="@color/slategray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="12dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvHour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="10dp">
+
+            <EditText
+                android:id="@+id/etHour"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="@string/hour"
+                android:padding="14dp"
+                android:textSize="18sp"
+                android:inputType="time"
+                android:importantForAutofill="no"
+                android:shadowRadius="0"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMinute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cvHour"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="10dp">
+
+            <EditText
+                android:id="@+id/etMinute"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="@string/minute"
+                android:importantForAutofill="no"
+                android:inputType="time"
+                android:padding="14dp"
+                android:shadowRadius="0"
+                android:textSize="18sp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvAlarm"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true">
+
+            <Button
+                android:id="@+id/btnAlarm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/darkslategray"
+                android:text="@string/set_alarm"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTime"
+            android:layout_centerVertical="true"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginLeft="16dp">
+
+            <Button
+                android:id="@+id/btnTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/darkslategray"
+                android:text="@string/set_time"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                />
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
